@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 1.5rem;
+}
+.header .start {
+  height: 50px;
+  width: 100px;
+  border: none;
+
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.header .start.active {
+  background-color: forestgreen;
+}
+.header .start.inactive {
+  background-color: #666;
+}
+.header .start:active {
+  transform: scale(0.9);
+}
+
+.main {
+  padding: 1rem;
+  text-align: center;
+}
+.main .question {
+  margin: 2rem 0;
+  padding: 1rem 2rem;
+  font-size: 6rem;
+  text-align: center;
+}
+.main .boxes {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.main .boxes button {
+  width: 100px;
+  height: 100px;
+  margin: 1rem;
+  background-color: blue;
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.main .boxes button:active {
+  transform: scale(0.9);
+}
+.main .stop {
+  height: 50px;
+  width: 100px;
+  margin: 2rem 0 3rem 0;
+  border: none;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.main .stop:active {
+  transform: scale(0.9);
+}
+.main .stop.active {
+  background-color: crimson;
+}
+.main .stop.inactive {
+  background-color: #666;
+}
+
+.mode {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem;
+  background-color: #666;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}

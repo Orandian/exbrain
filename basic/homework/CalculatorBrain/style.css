@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  background-color: aqua;
+}
+
+.header {
+  padding: 3rem;
+}
+.header h2 {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.header button {
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+.header button:last-child {
+  float: right;
+}
+.header button:active {
+  transform: scale(1.1);
+}
+.header .btnstart {
+  background-color: forestgreen;
+}
+.header .btnstop {
+  background-color: crimson;
+}
+.header .inactive {
+  background-color: #555;
+}
+
+.main {
+  padding: 0 5rem;
+}
+.main fieldset {
+  width: 300px;
+  padding: 0.5rem;
+  border: 1px solid#000;
+}
+.main button {
+  float: right;
+  margin: 1rem 0;
+  padding: 0.5rem 6rem;
+  cursor: pointer;
+}
+.main p {
+  font-weight: bold;
+  margin-top: 3rem;
+}

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Treasure Hunter</title>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body onload="mindBuild()">
+    <div class="head">
+      <div class="menu">
+        Find the treasure in <span id="move">10 </span>moves!
+      </div>
+    </div>
+
+    <div class="body">
+      <table class="tb">
+        <tr>
+          <td class="cell" id="11" onclick="press(this)"></td>
+          <td class="cell" id="12" onclick="press(this)"></td>
+          <td class="cell" id="13" onclick="press(this)"></td>
+          <td class="cell" id="14" onclick="press(this)"></td>
+          <td class="cell" id="15" onclick="press(this)"></td>
+          <td class="cell" id="16" onclick="press(this)"></td>
+          <td class="cell" id="17" onclick="press(this)"></td>
+          <td class="cell" id="18" onclick="press(this)"></td>
+          <td class="cell" id="19" onclick="press(this)"></td>
+          <td class="cell" id="110" onclick="press(this)"></td>
+          <td class="cell" id="111" onclick="press(this)"></td>
+          <td class="cell" id="112" onclick="press(this)"></td>
+          <td class="cell" id="113" onclick="press(this)"></td>
+          <td class="cell" id="114" onclick="press(this)"></td>
+          <td class="cell" id="115" onclick="press(this)"></td>
+          <td class="cell" id="116" onclick="press(this)"></td>
+          <td class="cell" id="117" onclick="press(this)"></td>
+          <td class="cell" id="118" onclick="press(this)"></td>
+        </tr>
+        <tr>
+          <td class="cell" id="21" onclick="press(this)"></td>
+          <td class="cell" id="22" onclick="press(this)"></td>
+          <td class="cell" id="23" onclick="press(this)"></td>
+          <td class="cell" id="24" onclick="press(this)"></td>
+          <td class="cell" id="25" onclick="press(this)"></td>
+          <td class="cell" id="26" onclick="press(this)"></td>
+          <td class="cell" id="27" onclick="press(this)"></td>
+          <td class="cell" id="28" onclick="press(this)"></td>
+          <td class="cell" id="29" onclick="press(this)"></td>
+          <td class="cell" id="210" onclick="press(this)"></td>
+          <td class="cell" id="211" onclick="press(this)"></td>
+          <td class="cell" id="212" onclick="press(this)"></td>
+          <td class="cell" id="213" onclick="press(this)"></td>
+          <td class="cell" id="214" onclick="press(this)"></td>
+          <td class="cell" id="215" onclick="press(this)"></td>
+          <td class="cell" id="216" onclick="press(this)"></td>
+          <td class="cell" id="217" onclick="press(this)"></td>
+          <td class="cell" id="218" onclick="press(this)"></td>
+        </tr>
+        <tr>
+          <td class="cell" id="31" onclick="press(this)"></td>
+          <td class="cell" id="32" onclick="press(this)"></td>
+          <td class="cell" id="33" onclick="press(this)"></td>
+          <td class="cell" id="34" onclick="press(this)"></td>
+          <td class="cell" id="35" onclick="press(this)"></td>
+          <td class="cell" id="36" onclick="press(this)"></td>
+          <td class="cell" id="37" onclick="press(this)"></td>
+          <td class="cell" id="38" onclick="press(this)"></td>
+          <td class="cell" id="39" onclick="press(this)"></td>
+          <td class="cell" id="310" onclick="press(this)"></td>
+          <td class="cell" id="311" onclick="press(this)"></td>
+          <td class="cell" id="312" onclick="press(this)"></td>
+          <td class="cell" id="313" onclick="press(this)"></td>
+          <td class="cell" id="314" onclick="press(this)"></td>
+          <td class="cell" id="315" onclick="press(this)"></td>
+          <td class="cell" id="316" onclick="press(this)"></td>
+          <td class="cell" id="317" onclick="press(this)"></td>
+          <td class="cell" id="318" onclick="press(this)"></td>
+        </tr>
+        <tr>
+          <td class="cell" id="41" onclick="press(this)"></td>
+          <td class="cell" id="42" onclick="press(this)"></td>
+          <td class="cell" id="43" onclick="press(this)"></td>
+          <td class="cell" id="44" onclick="press(this)"></td>
+          <td class="cell" id="45" onclick="press(this)"></td>
+          <td class="cell" id="46" onclick="press(this)"></td>
+          <td class="cell" id="47" onclick="press(this)"></td>
+          <td class="cell" id="48" onclick="press(this)"></td>
+          <td class="cell" id="49" onclick="press(this)"></td>
+          <td class="cell" id="410" onclick="press(this)"></td>
+          <td class="cell" id="411" onclick="press(this)"></td>
+          <td class="cell" id="412" onclick="press(this)"></td>
+          <td class="cell" id="413" onclick="press(this)"></td>
+          <td class="cell" id="414" onclick="press(this)"></td>
+          <td class="cell" id="415" onclick="press(this)"></td>
+          <td class="cell" id="416" onclick="press(this)"></td>
+          <td class="cell" id="417" onclick="press(this)"></td>
+          <td class="cell" id="418" onclick="press(this)"></td>
+        </tr>
+        <tr>
+          <td class="cell" id="51" onclick="press(this)"></td>
+          <td class="cell" id="52" onclick="press(this)"></td>
+          <td class="cell" id="53" onclick="press(this)"></td>
+          <td class="cell" id="54" onclick="press(this)"></td>
+          <td class="cell" id="55" onclick="press(this)"></td>
+          <td class="cell" id="56" onclick="press(this)"></td>
+          <td class="cell" id="57" onclick="press(this)"></td>
+          <td class="cell" id="58" onclick="press(this)"></td>
+          <td class="cell" id="59" onclick="press(this)"></td>
+          <td class="cell" id="510" onclick="press(this)"></td>
+          <td class="cell" id="511" onclick="press(this)"></td>
+          <td class="cell" id="512" onclick="press(this)"></td>
+          <td class="cell" id="513" onclick="press(this)"></td>
+          <td class="cell" id="514" onclick="press(this)"></td>
+          <td class="cell" id="515" onclick="press(this)"></td>
+          <td class="cell" id="516" onclick="press(this)"></td>
+          <td class="cell" id="517" onclick="press(this)"></td>
+          <td class="cell" id="518" onclick="press(this)"></td>
+        </tr>
+        <tr>
+          <td class="cell" id="61" onclick="press(this)"></td>
+          <td class="cell" id="62" onclick="press(this)"></td>
+          <td class="cell" id="63" onclick="press(this)"></td>
+          <td class="cell" id="64" onclick="press(this)"></td>
+          <td class="cell" id="65" onclick="press(this)"></td>
+          <td class="cell" id="66" onclick="press(this)"></td>
+          <td class="cell" id="67" onclick="press(this)"></td>
+          <td class="cell" id="68" onclick="press(this)"></td>
+          <td class="cell" id="69" onclick="press(this)"></td>
+          <td class="cell" id="610" onclick="press(this)"></td>
+          <td class="cell" id="611" onclick="press(this)"></td>
+          <td class="cell" id="612" onclick="press(this)"></td>
+          <td class="cell" id="613" onclick="press(this)"></td>
+          <td class="cell" id="614" onclick="press(this)"></td>
+          <td class="cell" id="615" onclick="press(this)"></td>
+          <td class="cell" id="616" onclick="press(this)"></td>
+          <td class="cell" id="617" onclick="press(this)"></td>
+          <td class="cell" id="618" onclick="press(this)"></td>
+        </tr>
+        <tr>
+          <td class="cell" id="71" onclick="press(this)"></td>
+          <td class="cell" id="72" onclick="press(this)"></td>
+          <td class="cell" id="73" onclick="press(this)"></td>
+          <td class="cell" id="74" onclick="press(this)"></td>
+          <td class="cell" id="75" onclick="press(this)"></td>
+          <td class="cell" id="76" onclick="press(this)"></td>
+          <td class="cell" id="77" onclick="press(this)"></td>
+          <td class="cell" id="78" onclick="press(this)"></td>
+          <td class="cell" id="79" onclick="press(this)"></td>
+          <td class="cell" id="710" onclick="press(this)"></td>
+          <td class="cell" id="711" onclick="press(this)"></td>
+          <td class="cell" id="712" onclick="press(this)"></td>
+          <td class="cell" id="713" onclick="press(this)"></td>
+          <td class="cell" id="714" onclick="press(this)"></td>
+          <td class="cell" id="715" onclick="press(this)"></td>
+          <td class="cell" id="716" onclick="press(this)"></td>
+          <td class="cell" id="717" onclick="press(this)"></td>
+          <td class="cell" id="718" onclick="press(this)"></td>
+        </tr>
+        <tr>
+          <td class="cell" id="81" onclick="press(this)"></td>
+          <td class="cell" id="82" onclick="press(this)"></td>
+          <td class="cell" id="83" onclick="press(this)"></td>
+          <td class="cell" id="84" onclick="press(this)"></td>
+          <td class="cell" id="85" onclick="press(this)"></td>
+          <td class="cell" id="86" onclick="press(this)"></td>
+          <td class="cell" id="87" onclick="press(this)"></td>
+          <td class="cell" id="88" onclick="press(this)"></td>
+          <td class="cell" id="89" onclick="press(this)"></td>
+          <td class="cell" id="810" onclick="press(this)"></td>
+          <td class="cell" id="811" onclick="press(this)"></td>
+          <td class="cell" id="812" onclick="press(this)"></td>
+          <td class="cell" id="813" onclick="press(this)"></td>
+          <td class="cell" id="814" onclick="press(this)"></td>
+          <td class="cell" id="815" onclick="press(this)"></td>
+          <td class="cell" id="816" onclick="press(this)"></td>
+          <td class="cell" id="817" onclick="press(this)"></td>
+          <td class="cell" id="818" onclick="press(this)"></td>
+        </tr>
+        <tr>
+          <td class="cell" id="91" onclick="press(this)"></td>
+          <td class="cell" id="92" onclick="press(this)"></td>
+          <td class="cell" id="93" onclick="press(this)"></td>
+          <td class="cell" id="94" onclick="press(this)"></td>
+          <td class="cell" id="95" onclick="press(this)"></td>
+          <td class="cell" id="96" onclick="press(this)"></td>
+          <td class="cell" id="97" onclick="press(this)"></td>
+          <td class="cell" id="98" onclick="press(this)"></td>
+          <td class="cell" id="99" onclick="press(this)"></td>
+          <td class="cell" id="910" onclick="press(this)"></td>
+          <td class="cell" id="911" onclick="press(this)"></td>
+          <td class="cell" id="912" onclick="press(this)"></td>
+          <td class="cell" id="913" onclick="press(this)"></td>
+          <td class="cell" id="914" onclick="press(this)"></td>
+          <td class="cell" id="915" onclick="press(this)"></td>
+          <td class="cell" id="916" onclick="press(this)"></td>
+          <td class="cell" id="917" onclick="press(this)"></td>
+          <td class="cell" id="918" onclick="press(this)"></td>
+        </tr>
+      </table>
+    </div>
+
+    <audio src="./btnclick.mp3" id="clickvoice"></audio>
+    <audio src="./gameover.mp3" id="gameover"></audio>
+    <audio src="./gamewin.mp3" id="gamewin"></audio>
+
+    <script src="./app.js" type="text/javascript"></script>
+  </body>
+</html>

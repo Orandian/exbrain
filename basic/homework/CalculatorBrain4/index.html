@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator Brain 4</title>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <p class="score">Scores: <span id="score">0</span></p>
+      <button id="startbtn" class="start active" onclick="start()">
+        Start
+      </button>
+      <p class="time">Time: <span id="time">0</span></p>
+    </div>
+
+    <div class="main">
+      <div class="question"><span id="question"></span> =</div>
+      <div class="boxes">
+        <button class="ranbtn" onclick="check(this)" disabled></button>
+        <button class="ranbtn" onclick="check(this)" disabled></button>
+        <button class="ranbtn" onclick="check(this)" disabled></button>
+        <button class="ranbtn" onclick="check(this)" disabled></button>
+        <button class="ranbtn" onclick="check(this)" disabled></button>
+        <button class="ranbtn" onclick="check(this)" disabled></button>
+      </div>
+      <button id="stopbtn" class="stop inactive" onclick="stop()" disabled>
+        Stop
+      </button>
+    </div>
+
+    <select id="mode" class="mode">
+      <option value="normal">Normal</option>
+      <option value="hyper">Hyper</option>
+      <option value="genius">Genius</option>
+    </select>
+
+    <div class="footer">
+      <p class="text" id="scoreResult"></p>
+    </div>
+
+    <script src="./app.js" type="text/javascript"></script>
+  </body>
+</html>

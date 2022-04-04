@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  color: #fff;
+}
+body {
+  background-color: #f7e0da;
+}
+
+.navbar {
+  padding: 1rem 0;
+  background-color: #6a45d8;
+  text-align: center;
+}
+.navbar li {
+  margin: 0 2rem;
+  list-style: none;
+  display: inline;
+}
+.navbar li.home {
+  text-decoration: underline;
+}
+.navbar button {
+  background: none;
+  border: 2px solid #fff;
+  padding: 0.5rem 1.75rem;
+  border-radius: 50px;
+}
+
+img {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.package {
+  text-align: center;
+  margin: 0.5rem 0;
+}
+.package div {
+  width: 400px;
+  height: 300px;
+  margin: 0 3rem;
+  display: inline-block;
+  padding: 1rem 0;
+  background-color: #6a45d8;
+  border-radius: 20px;
+  line-height: 200%;
+  overflow: auto;
+}
+.package div h4 {
+  color: rgb(223, 185, 140);
+  text-decoration: underline;
+}
+.package div button {
+  background: none;
+  border: 2px solid #fff;
+  padding: 0.5rem 4rem;
+  margin: 1rem 0;
+  color: rgb(223, 185, 140);
+  border-radius: 20px;
+  font-style: italic;
+}
+.package div .food {
+  color: rgb(197, 47, 47);
+}
+.package div .gold {
+  color: gold;
+}
+
+.footer {
+  text-align: center;
+  background-color: #6a45d8;
+  padding: 1rem 0;
+  margin-top: 1rem;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML Playground Test 4</title>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend><b>Request Form</b></legend>
+        <br />
+
+        <img src="./img/tokyo.jpg" alt="tokyo" width="100px" />
+        <h2><i>User Information</i></h2>
+
+        <label>Register DateTime</label>
+        <input type="text" value="2021/06/04 12:00 AM" disabled /> <br /><br />
+
+        <label>UserName :</label>
+        <input type="text" placeholder="john1234" required /> <br /><br />
+
+        <label>Password :</label>
+        <input type="password" /> <br /><br />
+
+        <label>Age :</label>
+        <input type="number" /> <br /><br />
+
+        <label>Gender :</label>
+        <select>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+        <br />
+        <br />
+
+        <label>Education :</label>
+        <input type="radio" name="education" value="Under Graduated" /> Under
+        Graduated
+        <input type="radio" name="education" value="Bachelor" /> Bachelor
+        <input type="radio" name="education" value="Master" /> Master <br />
+        <br />
+
+        <label>Card :</label>
+        <input type="checkbox" value="card" /> Car license
+        <input type="checkbox" value="card" /> Passport
+        <input type="checkbox" value="card" checked /> NRC <br /><br />
+
+        <label>Hobby</label>
+        <input list="hobbies" />
+        <datalist id="hobbies">
+          <option value="Football"></option>
+          <option value="Pro Gamer"></option>
+          <option value="Reading"></option>
+          <option value="Developer"></option>
+        </datalist>
+
+        <br /><br />
+
+        <label>Upload Your Profile</label>
+        <input type="file" />
+        <br /><br />
+
+        <label>Address</label>
+        <textarea></textarea>
+        <br /><br />
+
+        <input type="reset" value="Default" />
+        <input type="submit" value="Send" />
+        <button>
+          <a href="https://github.com/" target="_blank">Go Github</a>
+        </button>
+      </fieldset>
+    </form>
+  </body>
+</html>
