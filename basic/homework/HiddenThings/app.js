@@ -62,6 +62,8 @@ function treasure() {
   a6 = r + 1 + '' + (c - 1);
   a7 = r + 1 + '' + c;
   a8 = r + 1 + '' + (c + 1);
+
+  hint(r);
 }
 
 function mindBuild() {
@@ -111,8 +113,8 @@ function press(obj) {
     } else if (userPress == treasure1) {
       gamewinSound();
       obj.style.backgroundColor = 'cyan';
-      obj.innerHTML = 'Bingo!';
       gameWinDisplay();
+      obj.innerHTML = 'Bingo!';
     } else if (
       userPress == a1 ||
       userPress == a2 ||
@@ -192,6 +194,10 @@ function gameLose(obj) {
       move.innerHTML = 10 - i + ' ';
     }
   }
+}
+
+function hint(r) {
+  document.getElementById('hint').innerHTML = r;
 }
 
 function playClick() {

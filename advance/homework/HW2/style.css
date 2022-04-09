@@ -1,0 +1,212 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+  font-family: sans-serif;
+  background-image: url('./images/underwater.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+}
+
+.navbar {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.navbar .nav_logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.navbar .nav_button button {
+  padding: 0.5rem 1.5rem;
+  background: transparent;
+  color: #fff;
+  border-radius: 25px;
+  border: 1px solid #fff;
+  cursor: pointer;
+  transition: 1s;
+}
+.navbar .nav_button button:hover {
+  background-color: skyblue;
+}
+
+.main {
+  padding: 3rem 5rem;
+  color: #fff;
+}
+.main h1 {
+  font-size: 5rem;
+  text-shadow: 2px 2px 3px #fff;
+}
+.main h6 {
+  margin: -1rem 0 1rem 1rem;
+}
+.main p {
+  margin: 0 0 1rem 1rem;
+  line-height: 150%;
+  text-shadow: 1px 1px 3px #fff;
+}
+.main button {
+  margin-left: 20rem;
+  padding: 0.5rem 5rem;
+  border: 1px solid #fff;
+  border-radius: 25px;
+  background: transparent;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 1s;
+}
+.main button:hover {
+  background-color: skyblue;
+}
+
+.shark {
+  position: absolute;
+  bottom: 8rem;
+  left: -300px;
+  width: 200px;
+  opacity: 0.3;
+  animation: shark 30s infinite;
+}
+@keyframes shark {
+  to {
+    left: 1400px;
+  }
+}
+
+.bubble1 {
+  position: absolute;
+  width: 50px;
+  bottom: -50px;
+  left: 100px;
+  animation: bubble 10s infinite;
+}
+.bubble2 {
+  position: absolute;
+  width: 40px;
+  bottom: -40px;
+  left: 200px;
+  animation: bubble 10s infinite;
+  animation-delay: 1s;
+}
+.bubble3 {
+  position: absolute;
+  width: 80px;
+  bottom: -80px;
+  left: 400px;
+  animation: bubble 6s infinite;
+  animation-delay: 3s;
+}
+.bubble4 {
+  position: absolute;
+  width: 100px;
+  bottom: -100px;
+  right: 100px;
+  animation: bubble 10s infinite;
+  animation-delay: 5s;
+}
+.bubble5 {
+  position: absolute;
+  width: 70px;
+  bottom: -70px;
+  right: 200px;
+  animation: bubble 10s infinite;
+  animation-delay: 2s;
+}
+.bubble6 {
+  position: absolute;
+  width: 80px;
+  bottom: -80px;
+  right: 500px;
+  animation: bubble 8s infinite;
+  animation-delay: 2s;
+}
+.bubble7 {
+  position: absolute;
+  width: 100px;
+  bottom: -100px;
+  left: 300px;
+  animation: bubble 7s infinite;
+}
+.bubble8 {
+  position: absolute;
+  width: 40px;
+  bottom: -40px;
+  right: 250px;
+  animation: bubble 8s infinite;
+}
+.bubble9 {
+  position: absolute;
+  width: 150px;
+  bottom: -150px;
+  right: 600px;
+  animation: bubble 10s infinite;
+}
+.bubble10 {
+  position: absolute;
+  width: 50px;
+  bottom: -50px;
+  right: 500px;
+  animation: bubble 8s infinite;
+}
+@keyframes bubble {
+  to {
+    transform: translateY(-600px);
+    opacity: 0;
+  }
+}
+
+.fish1 {
+  position: absolute;
+  width: 100px;
+  top: 100px;
+  animation: fish1 10s infinite linear;
+}
+@keyframes fish1 {
+  0% {
+    left: 1300px;
+  }
+  60% {
+    transform: translateY(100px) rotate(-30deg);
+  }
+  80% {
+    transform: translateY(0px);
+  }
+  100% {
+    left: -100px;
+  }
+}
+
+.fish2 {
+  position: absolute;
+  width: 150px;
+  bottom: 200px;
+  left: 1400px;
+  animation: fish2 10s infinite linear;
+  animation-delay: 2s;
+}
+@keyframes fish2 {
+  0% {
+    left: 1400px;
+  }
+  40% {
+    transform: translateY(-100px) rotate(45deg);
+  }
+  60% {
+    transform: translateY(-100px);
+  }
+  80% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(-100px);
+    left: -200px;
+  }
+}

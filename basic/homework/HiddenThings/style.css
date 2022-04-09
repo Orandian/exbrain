@@ -16,3 +16,9 @@
   height: 50px;
   border: 2px solid gray;
 }
+.hinttext {
+  position: absolute;
+  bottom: 2rem;
+  left: 1rem;
+  font-size: 1.5rem;
+}
