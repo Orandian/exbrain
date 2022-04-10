@@ -174,7 +174,7 @@ body {
     left: 1300px;
   }
   60% {
-    transform: translateY(100px) rotate(-30deg);
+    transform: translateY(100px) rotate(-20deg);
   }
   80% {
     transform: translateY(0px);
@@ -189,7 +189,7 @@ body {
   width: 150px;
   bottom: 200px;
   left: 1400px;
-  animation: fish2 10s infinite linear;
+  animation: fish2 8s infinite linear;
   animation-delay: 2s;
 }
 @keyframes fish2 {
@@ -197,16 +197,41 @@ body {
     left: 1400px;
   }
   40% {
-    transform: translateY(-100px) rotate(45deg);
+    transform: translateY(-200px) rotate(20deg);
   }
   60% {
-    transform: translateY(-100px);
+    transform: translateY(-200px);
   }
   80% {
-    transform: translateY(-100px);
+    transform: translateY(-200px);
   }
   100% {
-    transform: translateY(-100px);
+    transform: translateY(-200px);
+    left: -200px;
+  }
+}
+
+.fish3 {
+  position: absolute;
+  width: 150px;
+  bottom: 300px;
+  animation: fish3 6s infinite linear;
+}
+@keyframes fish3 {
+  0% {
+    left: 1400px;
+  }
+  40% {
+    transform: translateY(200px) rotate(-10deg);
+  }
+  60% {
+    transform: translateY(200px);
+  }
+  80% {
+    transform: translateY(200px);
+  }
+  100% {
+    transform: translateY(200px);
     left: -200px;
   }
 }
