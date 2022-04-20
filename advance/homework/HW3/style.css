@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: blanchedalmond;
+  overflow: hidden;
+}
+
+.container {
+  width: 500px;
+  height: 500px;
+  border-radius: 10px;
+  border: 1px solid #000;
+  background-color: #fff;
+  padding: 0.5rem 1.5rem;
+}
+
+h1 {
+  color: chocolate;
+}
+input[type='text'] {
+  width: 400px;
+  padding: 0.5rem;
+  border: 2px solid #000;
+  border-radius: 5px;
+}
+.passwordHint {
+  display: block;
+  color: #f00;
+}
+#password:placeholder-shown ~ .passwordHint {
+  display: none;
+}
+
+input[type='radio'] {
+  margin: 0 2.5rem;
+}
+.freeplan,
+.goldplan,
+.diamondplan {
+  display: none;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  border-radius: 10px;
+}
+#free:checked ~ .freeplan {
+  display: block;
+  background-color: aqua;
+}
+#gold:checked ~ .goldplan {
+  display: block;
+  background-color: blueviolet;
+}
+#diamond:checked ~ .diamondplan {
+  display: block;
+  background-color: chartreuse;
+}
+
+button {
+  border-radius: 10px;
+  border: 1px solid #000;
+}
+.cancel {
+  padding: 0.5rem 1rem;
+  margin-right: 4rem;
+  cursor: pointer;
+}
+.cancel:hover {
+  background-color: #f00;
+  color: #fff;
+}
+.register {
+  padding: 0.5rem 5rem;
+  margin-left: 5rem;
+  cursor: pointer;
+}
+.register:hover {
+  background-color: #0f0;
+  color: #fff;
+}
