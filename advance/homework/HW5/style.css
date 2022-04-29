@@ -57,9 +57,7 @@ body {
 .box .userInput:focus {
   outline: none;
 }
-#caplock:checked ~ .keyboard .third_line .cap,
-#caplock:checked ~ .keyboard .fourth_line .cap,
-#caplock:checked ~ .keyboard .fifth_line .cap {
+#caplock:checked ~ .keyboard .keycaps .cap {
   text-transform: uppercase;
 }
 .box .info {
@@ -80,12 +78,7 @@ body {
 .box .keyboard {
   padding: 1rem;
 }
-.box .keyboard .first_line,
-.box .keyboard .second_line,
-.box .keyboard .third_line,
-.box .keyboard .fourth_line,
-.box .keyboard .fifth_line,
-.box .keyboard .sixth_line {
+.box .keyboard .keycaps {
   display: flex;
   justify-content: space-between;
   margin: 0.5rem 0;
@@ -99,23 +92,17 @@ body {
 .box .keyboard .sixth_line .btn.space {
   padding: 0 8rem;
 }
-.box .keyboard .second_line .btn,
-.box .keyboard .third_line .btn,
-.box .keyboard .fourth_line .btn,
-.box .keyboard .fifth_line .btn {
+.box .keyboard .keycaps .btn {
   padding: 0.5rem 1rem;
 }
-.box .keyboard .first_line button,
-.box .keyboard .second_line button,
-.box .keyboard .third_line button,
-.box .keyboard .fourth_line button,
-.box .keyboard .fifth_line button,
-.box .keyboard .sixth_line button {
+.box .keyboard .keycaps button {
   margin: 0 5px;
   padding: 0.5rem 0.5rem;
   border-radius: 5px;
   border: none;
   box-shadow: 2px 2px 0px #000;
+  background: #56ab91;
+  color: #fff;
   cursor: pointer;
 }
 button:active {
