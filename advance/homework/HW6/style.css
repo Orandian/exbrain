@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#turn,
+#winner {
+  font-size: 2rem;
+  margin: 1rem;
+}
+
+.board {
+  background-color: aquamarine;
+  border-radius: 5px;
+}
+.board .row {
+  display: flex;
+}
+.board .row .circle {
+  width: 80px;
+  height: 80px;
+  margin: 0.5rem;
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.4s linear;
+}
