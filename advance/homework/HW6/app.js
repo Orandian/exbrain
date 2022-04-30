@@ -11,6 +11,9 @@ var finished = false;
 
 var autoClicks = document.getElementsByClassName('autoclick');
 
+var winnerBox = document.getElementById('winnerbox');
+var winner = document.getElementById('winner');
+
 function flip(e) {
   if (!finished) {
     var valid = true;
@@ -63,7 +66,8 @@ function flip(e) {
       if (current == first) {
         current = second;
         document.getElementById('turn').innerHTML = 'Player 2 Turn';
-        document.getElementById('turn').style.color = 'teal';
+
+        // childish AI
         setTimeout(() => {
           var random = Math.floor(Math.random() * autoClicks.length);
           autoClicks[random].click();
@@ -71,7 +75,6 @@ function flip(e) {
       } else {
         current = first;
         document.getElementById('turn').innerHTML = 'Player 1 Turn';
-        document.getElementById('turn').style.color = 'tomato';
       }
       checkWhoWin();
     }
@@ -79,29 +82,45 @@ function flip(e) {
 }
 
 function checkWhoWin() {
+  // To Check Who Is Winner
+
+  // by using vertical
   if (vertical(first)) {
     finished = true;
-    document.getElementById('winner').innerHTML = 'Player 1 Win';
+    winnerBox.style.display = 'block';
+    winner.innerHTML = 'Player 1 Win';
   } else if (vertical(second)) {
     finished = true;
-    document.getElementById('winner').innerHTML = 'Player 2 Win';
+    winnerBox.style.display = 'block';
+    winner.innerHTML = 'Player 2 Win';
+
+    // by using horizontal
   } else if (horizontal(first)) {
     finished = true;
-    document.getElementById('winner').innerHTML = 'Player 1 Win';
+    winnerBox.style.display = 'block';
+    winner.innerHTML = 'Player 1 Win';
   } else if (horizontal(second)) {
     finished = true;
-    document.getElementById('winner').innerHTML = 'Player 2 Win';
+    winnerBox.style.display = 'block';
+    winner.innerHTML = 'Player 2 Win';
+
+    // by using diagonal
   } else if (diagonal(first)) {
     finished = true;
-    document.getElementById('winner').innerHTML = 'Player 1 Win';
+    winnerBox.style.display = 'block';
+    winner.innerHTML = 'Player 1 Win';
   } else if (diagonal(second)) {
     finished = true;
-    document.getElementById('winner').innerHTML = 'Player 2 Win';
+    winnerBox.style.display = 'block';
+    winner.innerHTML = 'Player 2 Win';
+
+    // by using draw
   } else {
     draw();
   }
 }
 
+// winning situation for vertical
 function vertical(player) {
   for (let i = 0; i < 4; i++) {
     if (
@@ -116,6 +135,7 @@ function vertical(player) {
   return false;
 }
 
+// winning situation for horizontal
 function horizontal(player) {
   if (
     (r1[0] == player &&
@@ -137,6 +157,7 @@ function horizontal(player) {
   return false;
 }
 
+// winning situation for diagonal
 function diagonal(player) {
   if (
     (r1[0] == player &&
@@ -150,6 +171,7 @@ function diagonal(player) {
   return false;
 }
 
+// draw situation
 function draw() {
   if (
     r1[0] != 0 &&
@@ -170,6 +192,12 @@ function draw() {
     r4[3] != 0
   ) {
     finished = true;
-    document.getElementById('winner').innerHTML = 'Draw';
+    winnerBox.style.display = 'block';
+    winner.innerHTML = 'Draw!';
   }
+}
+
+// play again reload
+function reload() {
+  location.reload();
 }
