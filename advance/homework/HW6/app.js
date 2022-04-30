@@ -9,12 +9,16 @@ var second = 2;
 var current = first;
 var finished = false;
 
+var autoClicks = document.getElementsByClassName('autoclick');
+
 function flip(e) {
   if (!finished) {
     var valid = true;
     let tmp = e.id.split(',');
     let clickRow = Number(tmp[0]);
     let clickColumn = Number(tmp[1] - 1);
+
+    e.className = 'circle';
 
     switch (clickRow) {
       case 1:
@@ -60,6 +64,10 @@ function flip(e) {
         current = second;
         document.getElementById('turn').innerHTML = 'Player 2 Turn';
         document.getElementById('turn').style.color = 'teal';
+        setTimeout(() => {
+          var random = Math.floor(Math.random() * autoClicks.length);
+          autoClicks[random].click();
+        }, 1000);
       } else {
         current = first;
         document.getElementById('turn').innerHTML = 'Player 1 Turn';
