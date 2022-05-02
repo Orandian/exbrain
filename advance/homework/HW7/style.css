@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  background-image: linear-gradient(#e66467, #9198e5);
+}
+
+.card {
+  padding: 1rem;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  color: #e66467;
+}
+.card p {
+  margin: 1rem 0;
+}
+img {
+  width: 150px;
+  transform: rotate(-20deg);
+  margin: 1rem;
+  transition: 2s linear;
+}
+.info {
+  width: 100%;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+.info button {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #e66467;
+  color: #fff;
+  transition: 2s;
+}
+.info button:first-child {
+  transform: translateY(100px);
+  opacity: 0;
+}
+.info button:last-child {
+  transform: translateX(100px);
+  opacity: 0;
+}
+.card:hover .info .buy {
+  transform: translateY(0);
+  opacity: 1;
+}
+.card:hover .info .detail {
+  transform: translateX(0);
+  opacity: 1;
+}
+.card:hover img {
+  transform: translate(-80px) rotate(-20deg);
+}

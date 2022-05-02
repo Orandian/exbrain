@@ -58,8 +58,10 @@ function flip(e) {
       e.style.transform = 'scaleY(-1)';
 
       if (current == first) {
+        e.style.border = 'none';
         e.style.background = 'tomato';
       } else {
+        e.style.border = 'none';
         e.style.background = 'teal';
       }
 
