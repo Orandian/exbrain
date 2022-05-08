@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Challenge</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onload="random()">
+    <div class="board">
+      <table>
+        <tr>
+          <td onclick="press(this)">A</td>
+          <td onclick="press(this)">B</td>
+          <td onclick="press(this)">C</td>
+          <td onclick="press(this)">D</td>
+          <td onclick="press(this)">E</td>
+          <td onclick="press(this)">F</td>
+        </tr>
+        <tr>
+          <td onclick="press(this)">G</td>
+          <td onclick="press(this)">H</td>
+          <td onclick="press(this)">I</td>
+          <td onclick="press(this)">J</td>
+          <td onclick="press(this)">K</td>
+          <td onclick="press(this)">L</td>
+        </tr>
+        <tr>
+          <td onclick="press(this)">M</td>
+          <td onclick="press(this)">N</td>
+          <td onclick="press(this)">O</td>
+          <td onclick="press(this)">P</td>
+          <td onclick="press(this)">Q</td>
+          <td onclick="press(this)">R</td>
+        </tr>
+        <tr>
+          <td onclick="press(this)">S</td>
+          <td onclick="press(this)">T</td>
+          <td onclick="press(this)">U</td>
+          <td onclick="press(this)">V</td>
+          <td onclick="press(this)">W</td>
+        </tr>
+        <tr>
+          <td onclick="press(this)">X</td>
+          <td onclick="press(this)">Y</td>
+          <td onclick="press(this)">Z</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="display">
+      <div class="random" id="text"></div>
+      <div class="clickbox">
+        <div id="item1"></div>
+        <div id="item2"></div>
+        <div id="item3"></div>
+        <div id="item4"></div>
+      </div>
+      <button onclick="checkAnswer()">OK</button>
+      <p id="result"></p>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

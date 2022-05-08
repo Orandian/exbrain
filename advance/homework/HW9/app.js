@@ -48,7 +48,12 @@ switch (month) {
 
 document.getElementById('today').innerHTML = today;
 
-function getDaysInMonth(month, year) {
+/**
+ * to get the days of the month in array
+ * to construct the lists by using the days's array of this month
+ * self-invoking function
+ */
+(function getDaysInMonth(month, year) {
   var date = new Date(year, month, 1);
   var days = [];
 
@@ -89,6 +94,7 @@ function getDaysInMonth(month, year) {
         break;
     }
 
+    // construct the lists by using template string (ES6)
     daylist.innerHTML += `
       <li class="day" onclick="toSetTime(this)" value="${date}">
         <span>${date}</span> 
@@ -98,14 +104,14 @@ function getDaysInMonth(month, year) {
       </li>
     `;
   }
-}
+})(month, year);
 
-getDaysInMonth(month, year);
-
+// to set the day in the month box
 function toSetTime(e) {
   setDay.innerHTML = e.value;
 }
 
+// to set schedule to the lists
 function toSetSchedule() {
   var day = document.getElementById('day');
   var night = document.getElementById('night');
@@ -119,6 +125,7 @@ function toSetSchedule() {
   night.value = '';
 }
 
+// to make the hour of this time - self-invoking function
 function setHour() {
   var getHour = new Date().getHours();
   var getMinute = new Date().getMinutes();
