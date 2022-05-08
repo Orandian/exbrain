@@ -5,11 +5,56 @@
 }
 body {
   display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #777;
+}
+
+.inputBox {
+  width: 400px;
+  height: 250px;
+  margin: 2rem 0;
+  border: 2px solid #000;
+  border-radius: 5px;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  min-height: 100vh;
-  background-color: #777;
+}
+.inputBox input {
+  width: 250px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+.inputBox input:focus {
+  outline: none;
+}
+.inputBox button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #000;
+  border-radius: 5px;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.monthBox {
+  border: 2px solid #000;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .box {
   width: 700px;
@@ -61,46 +106,4 @@ body {
 .box ul li .nighttime {
   background-color: #fff;
   color: #000;
-}
-.inputBox {
-  width: 400px;
-  height: 250px;
-  margin: 1rem 0;
-  border: 2px solid #000;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.inputBox input {
-  width: 250px;
-  height: 30px;
-  border: none;
-  border-radius: 5px;
-  margin: 0.5rem 0;
-  padding: 0.5rem;
-  font-size: 1rem;
-}
-.inputBox input:focus {
-  outline: none;
-}
-.inputBox button {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  background-color: #000;
-  border-radius: 5px;
-  color: #fff;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-
-.monthBox {
-  position: fixed;
-  top: 50%;
-  left: 50px;
-  transform: translateY(-50%);
-  border: 2px solid #000;
-  padding: 1rem;
-  border-radius: 5px;
 }

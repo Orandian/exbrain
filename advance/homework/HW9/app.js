@@ -130,7 +130,7 @@ function setHour() {
 
   var separate = document.getElementById('separate');
 
-  if (getHour >= 12) {
+  if (getHour > 12) {
     hour.innerHTML = getHour - 12;
     separate.innerHTML = 'PM';
   } else {

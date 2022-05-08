@@ -9,30 +9,34 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>計画</h1>
+    <div class="right">
+      <div class="inputBox">
+        <h1><span id="setDay">-</span>日</h1>
 
-    <div class="box">
-      <ul id="daylist"></ul>
+        <label for="daytime">昼間</label>
+        <input type="text" id="day" />
+
+        <label for="nighttime">夜間</label>
+        <input type="text" id="night" />
+        <button onclick="toSetSchedule()">タス</button>
+      </div>
+
+      <div class="monthBox">
+        <h2>月 -<span id="months"></span> (<span id="days"></span>Days)</h2>
+        <h2>日 - <span id="today"></span> 日</h2>
+        <h2>
+          時計 - <span id="hour"></span> : <span id="minute"></span> :
+          <span id="second"></span> (<span id="separate"></span>)
+        </h2>
+      </div>
     </div>
 
-    <div class="inputBox">
-      <h1><span id="setDay">-</span>日</h1>
+    <div class="left">
+      <h1>計画</h1>
 
-      <label for="daytime">昼間</label>
-      <input type="text" id="day" />
-
-      <label for="nighttime">夜間</label>
-      <input type="text" id="night" />
-      <button onclick="toSetSchedule()">Add</button>
-    </div>
-
-    <div class="monthBox">
-      <h2>月 -<span id="months"></span> (<span id="days"></span>Days)</h2>
-      <h2>日 - <span id="today"></span> 日</h2>
-      <h2>
-        時計 - <span id="hour"></span> : <span id="minute"></span> :
-        <span id="second"></span> (<span id="separate"></span>)
-      </h2>
+      <div class="box">
+        <ul id="daylist"></ul>
+      </div>
     </div>
 
     <script src="./app.js"></script>
