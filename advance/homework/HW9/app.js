@@ -55,32 +55,8 @@ document.getElementById('today').innerHTML = today;
   for (let i = 0; i < days.length; i++) {
     const daylist = document.getElementById('daylist');
     var today = days[i].getDay();
-    var day;
+    var day = daysArray[today];
     var date = days[i].getDate();
-
-    switch (today) {
-      case 0:
-        day = daysArray[0];
-        break;
-      case 1:
-        day = daysArray[1];
-        break;
-      case 2:
-        day = daysArray[2];
-        break;
-      case 3:
-        day = daysArray[3];
-        break;
-      case 4:
-        day = daysArray[4];
-        break;
-      case 5:
-        day = daysArray[5];
-        break;
-      case 6:
-        day = daysArray[6];
-        break;
-    }
 
     // construct the lists by using template string (ES6)
     daylist.innerHTML += `
