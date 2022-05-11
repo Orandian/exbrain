@@ -1,49 +1,37 @@
 var setDay = document.getElementById('setDay');
-
-var month = new Date().getMonth();
-var year = new Date().getFullYear();
-var today = new Date().getDate();
-
 var dayTime = document.getElementsByClassName('daytime');
 var nightTime = document.getElementsByClassName('nighttime');
 
-switch (month) {
-  case 0:
-    document.getElementById('months').innerHTML = '一月';
-    break;
-  case 1:
-    document.getElementById('months').innerHTML = '二月';
-    break;
-  case 2:
-    document.getElementById('months').innerHTML = '三月';
-    break;
-  case 3:
-    document.getElementById('months').innerHTML = '四月';
-    break;
-  case 4:
-    document.getElementById('months').innerHTML = '五月';
-    break;
-  case 5:
-    document.getElementById('months').innerHTML = '六月';
-    break;
-  case 6:
-    document.getElementById('months').innerHTML = '七月';
-    break;
-  case 7:
-    document.getElementById('months').innerHTML = '八月';
-    break;
-  case 8:
-    document.getElementById('months').innerHTML = '九月';
-    break;
-  case 9:
-    document.getElementById('months').innerHTML = '十月';
-    break;
-  case 10:
-    document.getElementById('months').innerHTML = '十一月';
-    break;
-  case 11:
-    document.getElementById('months').innerHTML = '十二月';
-    break;
+var year = new Date().getFullYear();
+var month = new Date().getMonth();
+var today = new Date().getDate();
+
+var monthsArray = [
+  '一月',
+  '二月',
+  '三月',
+  '四月',
+  '五月',
+  '六月',
+  '七月',
+  '八月',
+  '九月',
+  '十月',
+  '十一月',
+  '十二月',
+];
+var daysArray = [
+  '日曜日',
+  '月曜日',
+  '火曜日',
+  '水曜日',
+  '木曜日',
+  '金曜日',
+  '土曜日',
+];
+
+for (let i = 0; i <= month; i++) {
+  document.getElementById('months').innerHTML = monthsArray[i];
 }
 
 document.getElementById('today').innerHTML = today;
@@ -72,25 +60,25 @@ document.getElementById('today').innerHTML = today;
 
     switch (today) {
       case 0:
-        day = '日曜日';
+        day = daysArray[0];
         break;
       case 1:
-        day = '月曜日';
+        day = daysArray[1];
         break;
       case 2:
-        day = '火曜日';
+        day = daysArray[2];
         break;
       case 3:
-        day = '水曜日';
+        day = daysArray[3];
         break;
       case 4:
-        day = '木曜日';
+        day = daysArray[4];
         break;
       case 5:
-        day = '金曜日';
+        day = daysArray[5];
         break;
       case 6:
-        day = '土曜日';
+        day = daysArray[6];
         break;
     }
 
@@ -115,50 +103,24 @@ function toSetTime(e) {
 function toSetSchedule() {
   var day = document.getElementById('day');
   var night = document.getElementById('night');
-
   var x = +setDay.innerHTML - 1;
 
   dayTime[x].innerHTML = day.value;
   nightTime[x].innerHTML = night.value;
-
   day.value = '';
   night.value = '';
 }
 
-// to make the hour of this time - self-invoking function
-function setHour() {
+// to make the hour
+setInterval(() => {
   var getHour = new Date().getHours();
   var getMinute = new Date().getMinutes();
   var getSecond = new Date().getSeconds();
 
-  var hour = document.getElementById('hour');
-  var minute = document.getElementById('minute');
-  var second = document.getElementById('second');
-
-  var separate = document.getElementById('separate');
-
-  if (getHour > 12) {
-    hour.innerHTML = getHour - 12;
-    separate.innerHTML = 'PM';
-  } else {
-    hour.innerHTML = getHour;
-    separate.innerHTML = 'AM';
-  }
-
-  if (getMinute < 10) {
-    minute.innerHTML = '0' + getMinute;
-  } else {
-    minute.innerHTML = getMinute;
-  }
-
-  if (getSecond < 10) {
-    second.innerHTML = '0' + getSecond;
-  } else {
-    second.innerHTML = getSecond;
-  }
-}
-setHour();
-
-setInterval(() => {
-  setHour();
-}, 1000);
+  document.getElementById('hour').innerHTML = `
+      ${getHour > 12 ? getHour - 12 : getHour} :
+      ${getMinute < 10 ? '0' + getMinute : getMinute} :
+      ${getSecond < 10 ? '0' + getSecond : getSecond}
+      (${getHour > 12 ? 'PM' : 'AM'})
+    `;
+});
