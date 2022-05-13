@@ -30,6 +30,10 @@ var daysArray = [
   '土曜日',
 ];
 
+/**
+ * A TRICK TO GET THE LAST DAY OF MONTH
+ * const lastDayInMonth = new Date(year, month+1,0).getDate();
+ */
 for (let i = 0; i <= month; i++) {
   document.getElementById('months').innerHTML = monthsArray[i];
 }
