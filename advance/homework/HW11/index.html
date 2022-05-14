@@ -36,6 +36,28 @@
         <td onclick="match(this)"></td>
       </tr>
     </table>
+
+    <div class="controls">
+      <div class="setTime">
+        <button onclick="getTime(this)" value="10" disabled id="one">
+          10s
+        </button>
+        <button onclick="getTime(this)" value="20" disabled id="two">
+          20s
+        </button>
+        <button onclick="getTime(this)" value="30" disabled id="three">
+          30s
+        </button>
+      </div>
+      <button onclick="startGame()" id="start">Start</button>
+      <h1><span id="timeCount">10</span>s</h1>
+    </div>
+
     <div id="cover"></div>
+
+    <div class="gameOverBox" id="gameOverBox">
+      <h1>Game Over</h1>
+      <button onclick="playAgain()">Play Again!</button>
+    </div>
   </body>
 </html>

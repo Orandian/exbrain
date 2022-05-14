@@ -5,9 +5,10 @@
 }
 body {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   min-height: 100vh;
+  font-family: sans-serif;
 }
 
 table {
@@ -19,8 +20,9 @@ table {
   left: 0;
   width: 100%;
   height: 100%;
-  background: transparent;
+  background: rgba(0, 0, 0, 0.7);
   z-index: 2;
+  display: none;
 }
 table tr td {
   width: 100px;
@@ -28,6 +30,54 @@ table tr td {
   background: #7f7f7f;
   border-radius: 10px;
 }
-.active {
-  transform: scale(1.1);
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 10;
+}
+.controls .setTime {
+  margin-bottom: 1rem;
+}
+.controls .setTime button {
+  padding: 1rem 2rem;
+  background: #333;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  margin: 0 1rem;
+  cursor: pointer;
+}
+.controls button {
+  padding: 1.2rem 2.3rem;
+  background: #f00;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  margin: 2rem 0;
+  cursor: pointer;
+}
+.controls h1 {
+  font-size: 3rem;
+}
+
+.gameOverBox {
+  position: absolute;
+  padding: 2rem;
+  background: cadetblue;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  display: none;
+  z-index: 20;
+}
+.gameOverBox button {
+  padding: 0.5rem 1rem;
+  margin-top: 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
