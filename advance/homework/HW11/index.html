@@ -10,7 +10,7 @@
     <script src="./app.js" defer></script>
   </head>
   <body>
-    <table id="table">
+    <table id="table" aria-disabled="true">
       <tr>
         <td onclick="match(this)"></td>
         <td onclick="match(this)"></td>
@@ -37,15 +37,33 @@
       </tr>
     </table>
 
-    <div class="controls">
+    <div class="controls" id="controls">
       <div class="setTime">
-        <button onclick="getTime(this)" value="10" disabled id="one">
+        <button
+          onclick="getTime(this)"
+          value="10"
+          id="one"
+          class="btn"
+          disabled
+        >
           10s
         </button>
-        <button onclick="getTime(this)" value="20" disabled id="two">
+        <button
+          onclick="getTime(this)"
+          value="20"
+          id="two"
+          class="btn"
+          disabled
+        >
           20s
         </button>
-        <button onclick="getTime(this)" value="30" disabled id="three">
+        <button
+          onclick="getTime(this)"
+          value="30"
+          id="three"
+          class="btn"
+          disabled
+        >
           30s
         </button>
       </div>

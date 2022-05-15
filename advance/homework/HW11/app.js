@@ -4,8 +4,10 @@ var x = '';
 var y = '';
 var click = document.getElementsByClassName('click');
 var cells = document.getElementsByTagName('td');
+var btns = document.getElementsByClassName('btn');
 var table = document.getElementById('table');
 var timeCount = document.getElementById('timeCount');
+var decreasing;
 
 const colors = [
   'red',
@@ -30,13 +32,11 @@ const colors = [
  * TO START THE GAME
  */
 function startGame() {
-  document.getElementById('one').disabled = false;
-  document.getElementById('two').disabled = false;
-  document.getElementById('three').disabled = false;
+  for (let i = 0; i < btns.length; i++) {
+    btns[i].disabled = false;
+    btns[i].style.background = '#00f';
+  }
   document.getElementById('start').disabled = true;
-  document.getElementById('one').style.background = '#00f';
-  document.getElementById('two').style.background = '#00f';
-  document.getElementById('three').style.background = '#00f';
   document.getElementById('start').style.background = '#333';
 }
 
@@ -70,7 +70,7 @@ function randomColor() {
 function blind() {
   for (let i = 0; i < cells.length; i++) {
     cells[i].style.background = '#777';
-    table.style.zIndex = '4';
+    table.style.zIndex = '3';
   }
 }
 
@@ -83,18 +83,20 @@ function blind() {
 function getTime(e) {
   shuffleArray(colors);
   randomColor();
+  disabledButton();
 
   timeCount.innerHTML = e.value;
 
   function decreasingTimeCount() {
     setTimeout(() => {
+      document.getElementById('cover').style.zIndex = '-1';
       +timeCount.innerHTML--;
       if (timeCount.innerHTML == 0) {
         gameOver();
       }
     }, 2000);
   }
-  const decreasing = setInterval(decreasingTimeCount, 1000);
+  decreasing = setInterval(decreasingTimeCount, 1000);
   stopDecreasingTimeCount(decreasing, e.value);
 }
 
@@ -111,6 +113,7 @@ function stopDecreasingTimeCount(decreasing, interval) {
  * TO MATCH THE COLOR OF USER CLICK
  */
 function match(e) {
+  e.style.background = e.value;
   if (firstClick == false) {
     firstClick = true;
     x = e.value;
@@ -147,9 +150,10 @@ function toCheckColor(color1, color2) {
  * GAME OVER
  */
 function gameOver() {
+  disableTable();
+  document.getElementById('cover').style.background = 'rgba(0,0,0,0.7)';
+  clearInterval(decreasing);
   document.getElementById('gameOverBox').style.display = 'block';
-  document.getElementById('cover').style.display = 'block';
-  document.getElementById('cover').style.zIndex = '19';
 }
 
 /**
@@ -157,4 +161,23 @@ function gameOver() {
  */
 function playAgain() {
   window.location.reload();
+}
+
+/**
+ * TO DISABLED THE TABLE'S CELLS
+ */
+function disableTable() {
+  for (let i = 0; i < cells.length; i++) {
+    cells[i].onclick = null;
+  }
+}
+
+/**
+ * TO DISABLED THE BTNS
+ */
+function disabledButton() {
+  for (let i = 0; i < btns.length; i++) {
+    btns[i].onclick = null;
+    btns[i].style.background = '#333';
+  }
 }

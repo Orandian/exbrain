@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  gap: 10rem;
+}
+
+.controls button {
+  width: 70px;
+  height: 40px;
+  margin: 0 1rem;
+  border-radius: 10px;
+  border: none;
+  background: #00f;
+  color: #fff;
+  cursor: pointer;
+}
+.circle {
+  width: 100px;
+  height: 100px;
+  color: #fff;
+  background: #f00;
+  font-size: 3rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  transition: 0.5s;
+  animation: animate 1s linear infinite;
+}
+@keyframes animate {
+  0% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+}
