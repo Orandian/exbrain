@@ -34,7 +34,7 @@ body {
   align-items: center;
   visibility: hidden;
   transition: 0.5s;
-  animation: animate 1s linear infinite;
+  animation: animate 1s ease infinite;
 }
 @keyframes animate {
   0% {

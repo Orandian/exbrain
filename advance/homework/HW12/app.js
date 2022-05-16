@@ -14,7 +14,7 @@ function getTime(e) {
         circle.style.visibility = 'hidden';
         enabledButton();
       }
-    }, 500);
+    });
   }
   const decreasing = setInterval(decreasingTimeCount, 1000);
   stopDecreasingTimeCount(decreasing, e.value);

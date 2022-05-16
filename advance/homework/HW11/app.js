@@ -138,8 +138,7 @@ function match(e) {
 function toCheckColor(color1, color2) {
   if (color1 == color2) {
     for (let i = 0; i < click.length; i++) {
-      click[i].style.background = '#fff';
-      click[i].style.border = 'none';
+      click[i].style.background = 'transparent';
     }
   } else if (color1 != color2) {
     gameOver();
