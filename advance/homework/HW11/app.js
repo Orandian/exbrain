@@ -70,7 +70,6 @@ function randomColor() {
 function blind() {
   for (let i = 0; i < cells.length; i++) {
     cells[i].style.background = '#777';
-    table.style.zIndex = '3';
   }
 }
 
