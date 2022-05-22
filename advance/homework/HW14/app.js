@@ -6,7 +6,7 @@ let answer = 0;
 let randomNumber = 0;
 
 function random() {
-  randomNumber = Math.floor(Math.random() * 100 + 1);
+  randomNumber = Math.floor(Math.random() * 100);
   question.innerHTML = randomNumber;
 }
 random();
@@ -19,6 +19,7 @@ function getNumber(e) {
   } else {
     addNumbers.innerHTML += '+' + value;
   }
+  //   addNumbers.innerHTML == "" ? e.innerHTML : "+" + e.innerHTML;
   result.innerHTML = answer;
 
   if (randomNumber == answer) {
@@ -35,6 +36,13 @@ function getNumber(e) {
     }
   }
 }
+
+// NO NEED ONCLICK
+// [...getNumbers].forEach((getNumber) => {
+//   getNumber.addEventListener('click', (e) => {
+//     console.log(e.target.innerHTML);
+//   });
+// });
 
 function again() {
   window.location.reload();

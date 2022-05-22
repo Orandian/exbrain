@@ -23,10 +23,12 @@ table {
   background: #fff;
   color: #000;
   cursor: pointer;
+  transition: 0.4s;
 }
 .getNumber:hover {
   background: crimson;
   color: #fff;
+  transform: scale(1.1);
 }
 .again {
   padding: 0.5rem 1rem;
