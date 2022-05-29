@@ -8,10 +8,8 @@ $(document).ready(function () {
             <p class="quantity">Quantity: ${$('#quantity').val()}</p>
         </div>
     `);
-  });
-
-  $('#trash').click(function () {
-    console.log('hello');
-    // $(this).parents('div.addItem').remove();
+    $('#trash').click(function () {
+      $(this).parents('.addItem').remove();
+    });
   });
 });

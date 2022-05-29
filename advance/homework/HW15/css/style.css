@@ -110,6 +110,7 @@ body {
 
 .cart .addItem .icon ion-icon {
   cursor: pointer;
+  z-index: 2;
 }
 
 .cart .addItem img {
