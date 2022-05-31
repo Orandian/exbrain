@@ -28,7 +28,7 @@ body {
 
 .item h1 {
   text-transform: uppercase;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
 }
 
 .item label {
@@ -37,11 +37,25 @@ body {
   font-weight: bold;
 }
 
+.item input {
+  width: 100%;
+  border: none;
+  background: #f4f4f4;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  display: block;
+  margin: 1rem 0;
+}
+
+.item input:focus {
+  outline: none;
+}
+
 .item select {
   width: 100%;
   height: 1.5rem;
   display: block;
-  margin: 3rem 0;
+  margin: 2rem 0;
   border: none;
 }
 
@@ -56,7 +70,7 @@ body {
 }
 
 .item .ctaBtn {
-  margin: 5rem 0;
+  margin: 2rem 0;
   text-align: center;
 }
 
@@ -87,8 +101,8 @@ body {
 }
 
 .cart .addItem {
-  width: 200px;
-  height: 250px;
+  width: 250px;
+  height: 300px;
   padding-top: 1rem;
   text-align: center;
   background: #fff;
