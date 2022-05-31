@@ -24,6 +24,7 @@ body {
   width: 30%;
   height: 100vh;
   padding: 3rem 2rem;
+  background: #f4f4f4;
 }
 
 .item h1 {
@@ -40,11 +41,11 @@ body {
 .item input {
   width: 100%;
   border: none;
-  background: #f4f4f4;
   padding: 0.5rem 1rem;
   font-size: 1.2rem;
   display: block;
   margin: 1rem 0;
+  border-radius: 5px;
 }
 
 .item input:focus {
@@ -53,10 +54,11 @@ body {
 
 .item select {
   width: 100%;
-  height: 1.5rem;
   display: block;
   margin: 2rem 0;
   border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
 }
 
 .item select:focus {
