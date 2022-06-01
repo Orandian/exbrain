@@ -1,6 +1,9 @@
 $(document).ready(function () {
   $('#addToCart').click(function () {
-    $('#itemList').append(`
+    if ($('#name').val() == '' || $('#price').val() == '') {
+      window.alert('Error');
+    } else {
+      $('#itemList').append(`
         <div class="addItem">
           <div class="icon"><ion-icon name="trash-bin-outline" class="trash"></ion-icon></div>
           <h1>${$('#name').val()}</h1>
@@ -8,9 +11,10 @@ $(document).ready(function () {
           <p class="price">Price: $<span>${$('#price').val()}</span></p>
           <p class="quantity">Quantity: ${$('#quantity').val()}</p>
         </div>
-    `);
-    $('.trash').click(function () {
-      $(this).parents('.addItem').remove();
-    });
+      `);
+      $('.trash').click(function () {
+        $(this).parents('.addItem').remove();
+      });
+    }
   });
 });
