@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.nav {
+  display: flex;
+  justify-content: center;
+}
+.nav div {
+  margin: 10px;
+}
+select,
+button,
+input {
+  height: 30px;
+  font-size: 16px;
+  color: navy;
+  border: 2px solid navy;
+}
+button {
+  background-color: aliceblue;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 3%;
+}
+
+.table {
+  display: flex;
+  justify-content: center;
+}
+table {
+  color: navy;
+}

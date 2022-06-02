@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.block {
+  padding: 20px;
+  border-radius: 12px;
+  background-color: blueviolet;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title {
+  margin: 12px;
+  font-size: 20px;
+  color: white;
+}
+input,
+select {
+  margin: 10px;
+  height: 20px;
+}
+.conText {
+  color: tomato;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sport API</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="./jquery3.6.0.js"></script>
+    <script src="./app.js"></script>
+  </head>
+  <body>
+    <div class="nav">
+      <div class="continent">
+        <select id="continent">
+          <option value="Africa">Africa</option>
+          <option value="Asia">Asia</option>
+          <option value="Europe">Europe</option>
+          <option value="Oceania">Oceania</option>
+          <option value="North America">North America</option>
+          <option value="South America">South America</option>
+        </select>
+      </div>
+
+      <div class="country">
+        <select id="country"></select>
+      </div>
+
+      <div>
+        <input type="text" id="maxAge" placeholder="maximum age" />
+      </div>
+
+      <div>
+        <input type="text" id="minAge" placeholder="minimum age" />
+      </div>
+
+      <div>
+        <button id="search">Search</button>
+      </div>
+    </div>
+
+    <div class="table">
+      <table cellspacing="20px" id="">
+        <tr>
+          <td>No.</td>
+          <td>Name</td>
+          <td>Age</td>
+          <td>Birthday</td>
+          <td>Height</td>
+          <td>Weight</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
