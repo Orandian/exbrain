@@ -1,12 +1,12 @@
 :root {
-  --primary-color: #333;
-  --secondary-color: #fff;
+  --primary-color: #555;
+  --secondary-color: #f7f7f7;
   transition: 0.5s;
 }
 html.dark {
-  --primary-color: #fff;
+  --primary-color: #f7f7f7;
   --secondary-color: #333;
-  background-color: #111;
+  background-color: #444;
   color: var(--primary-color);
   transition: 0.5s;
 }
@@ -106,6 +106,8 @@ body {
 }
 .card label {
   margin-top: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 .card input {
   margin: 0.5rem;
